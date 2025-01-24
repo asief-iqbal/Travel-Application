@@ -8,13 +8,20 @@ const Navbar = () => {
       <Link href="/">
         <Image src="/hilink-logo.svg" alt="logo" width={74} height={29} />
       </Link>
+
+      
       <ul className="hidden h-full gap-12 lg:flex">
         {NAV_LINKS.map((link) => (
-          <li key={link.key}>
-            <Link href={link.href}>{link.label}</Link>
-          </li>
+          <Link href={link.href} key={link.key} className ="regular-16 text-grey-50 flexceenter cursor-pointer pb-1.5 transition-all hover:font-bold">
+            {link.label}
+          </Link>
         ))}
       </ul>
+
+
+      <div>
+
+      </div>
     </nav>
   );
 };
